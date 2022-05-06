@@ -1,0 +1,97 @@
+section#banner{
+    background: url(../img/about-us-banner.jpg) !important;
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/***** aboutCard Section *****/
+#aboutCard{
+    background: var(--secondaryColor);
+}
+#aboutCard .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+}
+#aboutCard .container .card{
+    background: var(--whiteColor);
+    border-bottom: 3px solid var(--primaryColor);
+    cursor: pointer;
+}
+#aboutCard .container .card .top{
+    width: 100%;
+    height: 22rem;
+    overflow: hidden;
+}
+#aboutCard .container .card .top img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#aboutCard .container .card .bottom{
+    padding: 3rem;
+}
+#aboutCard .container .card .bottom h3{
+    padding-bottom: 2rem;
+}
+#aboutCard .container .card .bottom p{
+    padding-bottom: 0;
+}
+/***** End aboutCard Section *****/
+
+/***** Services Section *****/
+#service{
+    background: var(--whiteColor);
+}
+#service .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+#service .container .card{
+    padding: 3rem 2.5rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    grid-gap: 1rem;
+    cursor: pointer;
+}
+#service .container .card img{
+    margin-bottom: 1rem;
+}
+/***** End Services Section *****/
+
+
+/***** Image And Text Section *****/
+.imageAndText{
+    background: var(--whiteColor);
+    padding-bottom: 7rem;
+}
+.imageAndText .container{
+    background: var(--secondaryColor);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 3rem;
+    padding: 0;
+}
+.imageAndText .container .left{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.imageAndText .container .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imageAndText .container .right{
+    padding: 3rem;
+}
+.imageAndText .container .right h2{
+    text-transform: non;
+}
+/***** End Image And Text Section *****/

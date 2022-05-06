@@ -1,0 +1,83 @@
+section#banner{
+    background: url(../img/contact\ banner.jpg) !important;
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/***** Contact page top  Section *****/
+#ContactTop{
+    width: 100%;
+    background: var(--whiteColor);
+}
+#ContactTop .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: flex-start;
+}
+
+#ContactTop .container form{
+    width: 100%;
+}
+#ContactTop .container form input,
+#ContactTop .container form textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    background: var(--secondaryColor);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-family: var(--secondaryFont);
+    letter-spacing: 0.1rem;
+    color: var(--primaryTextColor);
+}
+#ContactTop .container form input::placeholder,
+#ContactTop .container form textarea::placeholder{
+    font-size: 1.6rem;
+    color: var(--paraColor);
+}
+#ContactTop .container form input[type="submit"]{
+    cursor: pointer;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+}
+
+#ContactTop .container .office .officeWrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#ContactTop .container .office .officeWrapper .card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1.5rem;
+    padding: 2rem;
+}
+#ContactTop .container .office .officeWrapper .card p{
+    padding-bottom: 0;
+}
+#ContactTop .container .office .officeWrapper .card .left{
+    text-align: center;
+}
+#ContactTop .container .office .officeWrapper .card .left img{
+    width: 3.5rem;
+}
+/***** End Contact page top Section *****/
+
+/***** Map Section *****/
+#map{
+    width: 100%;
+    height: 55rem;
+}
+#map iframe{
+    width: 100%;
+    height: 100%;
+}
+/***** End Map Section *****/

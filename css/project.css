@@ -1,0 +1,86 @@
+section#banner{
+    background: url(../img/project\ banner.jpg) !important;
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/***** Projcet Gallery Section *****/
+#projectGallery{
+    width: 100%;
+    background: var(--whiteColor);
+}
+#projectGallery .container .galleryWrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+}
+#projectGallery .container .galleryWrapper .imgBox{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+#projectGallery .container .galleryWrapper .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+#projectGallery .container .galleryWrapper .imgBox:hover img{
+    transform: scale(1.25);
+}
+/***** End Projcet Gallery Section *****/
+
+/***** discussion Section *****/
+#discussion{
+    width: 100%;
+    background: var(--whiteColor);
+}
+#discussion .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-top: 0;
+}
+#discussion .container div.left{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+#discussion .container div.left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#discussion .container .right{
+    width: 100%;
+    padding: 2.5rem;
+    padding-left: 5rem;
+}
+#discussion .container .right ul li span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--primaryColor);
+}
+#discussion .container .right ul{
+    margin-bottom: 3rem;
+}
+#discussion .container .right ul li{
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+    font-family: var(--secondaryFont);
+    color: var(--paraColor);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+/***** End discussion Section *****/

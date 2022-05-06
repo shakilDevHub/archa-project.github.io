@@ -1,0 +1,562 @@
+/***** Header Section *****/
+header{
+    background: var(--whiteColor);
+    min-height: 8rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header nav a.logo{
+    margin-left: 3rem;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+header nav ul li{
+    display: block;
+}
+header nav ul li a{
+    display: block;
+    color: var(--primaryTextColor);
+    font-family: var(--primaryFont);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 1rem 2.5rem;
+    transition: 0.3s;
+}
+header nav ul li a:hover,
+header nav ul li a:active,
+header nav ul li a.active{
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+header nav input[type="checkbox"],
+header nav label.barIcon{
+    display: none;
+}
+/***** End Header Section *****/
+
+/*****hero Section *****/
+#hero{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+#hero::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #3A3530;
+    opacity: 0.4;
+}
+#hero .content{
+    z-index: 1;
+    text-align: center;
+    width: 80%;
+    max-width: 60rem;
+    transform: translateY(-25%);
+}
+#hero .content p{
+    color: var(--whiteColor);
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+}
+/*****hero End Section *****/
+
+/***** heroBox Section *****/
+#heroBox .container{
+    padding: 0;
+    overflow-x: visible;
+}
+#heroBox .wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transform: translateY(-10rem);
+    grid-gap: 0.5rem;
+}
+#heroBox .wrapper .card{
+    text-align: center;
+    display: grid;
+    place-items: center;
+    grid-gap: 1rem;
+    padding: 3rem 2.5rem;
+    cursor: pointer;
+}
+#heroBox .wrapper .card img{
+    margin-bottom: 1rem;
+}
+#heroBox .wrapper .card:nth-of-type(even){
+    background: var(--primaryColor);
+}
+#heroBox .wrapper .card:nth-of-type(even) h4,
+#heroBox .wrapper .card:nth-of-type(even) p{
+    color: var(--whiteColor);
+}
+#heroBox .wrapper .card:nth-of-type(odd){
+    background: var(--secondaryColor);
+}
+/***** heroBox End heroBox  *****/
+
+/***** about Section *****/
+#about{
+    background: var(--whiteColor);
+}
+#about .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    align-items: center;
+}
+#about .container .left{
+    width: 100%;
+    max-width: 40rem;
+}
+#about .container .left ul li span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--primaryColor);
+}
+#about .container .left ul{
+    margin-bottom: 3rem;
+}
+#about .container .left ul li{
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+    font-family: var(--secondaryFont);
+    color: var(--paraColor);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+#about .container .right{
+    display: grid;
+    place-items: center;
+}
+#about .container .right .content{
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+}
+#about .container .right .content::before{
+    position: absolute;
+	width: 140px;
+	height: 140px;
+    background: url(../img/about-us-icon1.svg);
+    background-size: contain;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	transform: translate(-25%, -25%);
+}
+#about .container .right .content::after{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+    background: url(../img/about-us-icon2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+	z-index: 1;
+	bottom: 0;
+	right: 0;
+}
+#about .container .right img{
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    transform: translateY(0);
+    animation: aboutImage 3s linear infinite forwards alternate;
+}
+@keyframes aboutImage {
+    0%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(10%);
+    }
+}
+/***** End about Section *****/
+
+/***** service Section *****/
+#service{
+    background: var(--secondaryColor);
+}
+#service .container h2.center::before{
+    content: 'Our services';
+}
+#service .container .serviceBox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#service .container .serviceBox .card{
+    padding: 3.5rem 2.5rem;
+    background: var(--whiteColor);
+    border: 0.01rem solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    grid-gap: 1rem;
+    cursor: pointer;
+}
+#service .container .serviceBox .card img{
+    margin-bottom: 1rem;
+}
+/***** End service Section *****/
+
+/***** Two column Section *****/
+#twoColumn{
+    background: var(--whiteColor);
+}
+#twoColumn .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+    align-items: center;
+}
+#twoColumn .container div.left{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+#twoColumn .container .left img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+/***** End Two column Section *****/
+
+/***** Gallery Section *****/
+#gallery{
+    background: var(--whiteColor);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+}
+#gallery .imgBox{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#gallery .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#gallery .imgBox:hover img{
+    transform: scale(1.25);
+}
+/***** End Gallery Section *****/
+
+/*****Work Section *****/
+#work{
+    background: var(--secondaryColor);
+}
+#work h2.center::before{
+    content: 'WORK';
+}
+#work .workBox{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5rem;
+}
+#work .workBox .card{
+    text-align: center;
+    display: grid;
+    place-items: center;
+    grid-gap: 1rem;
+    padding: 3rem 3.5rem;
+    cursor: pointer;
+}
+#work .workBox .card h3{
+    font-size: 8rem;
+    line-height: 10rem;
+    text-align: center;
+    font-family: var(--primaryFont);
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--darkColor);
+    opacity: 0.2;
+    user-select: none;
+}
+/***** EndWork Section *****/
+
+/***** Client Section *****/
+#client{
+    background: var(--whiteColor);
+}
+#client .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5rem 3rem;
+    place-items: center;
+}
+#client .container .imgBox{
+    width: 12rem;
+    height: 12rem;
+    overflow: hidden;
+}
+#client .container .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/***** End Client Section *****/
+
+/***** Testimonial Section *****/
+#testimonial{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+    align-items: center;
+    background: var(--secondaryTextColor);
+}
+#testimonial div.left{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#testimonial div.left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#testimonial .right{
+    padding: 2.5rem 1rem;
+    padding-left: 8rem;
+    width: 100%;
+    max-width: 51rem;
+}
+#testimonial .right .testimonialInfo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+#testimonial .right .testimonialInfo .leftInner{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#testimonial .right .testimonialInfo .leftInner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#testimonial .right .testimonialInfo .rightInner p{
+    padding: 0;
+}
+/***** End Testimonial Section *****/
+
+/***** counting Section *****/
+#count{
+    background: var(--whiteColor);
+}
+#count .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5rem 3rem;
+    place-items: center;
+}
+#count .container .card{
+    text-align: center;
+    display: grid;
+    place-items: center;
+    grid-gap: 1.5rem;
+}
+#count .container .card h3{
+    color: var(--primaryTextColor);
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
+    font-family: var(--primaryFont);
+}
+#count .container .card span{
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-family: var(--secondaryFont);
+    color: var(--paraColor);
+}
+/***** End counting Section *****/
+
+/***** Blog Section *****/
+#blog{
+    background: var(--secondaryColor);
+}
+#blog h2.center::before{
+    content: 'Latest News';
+}
+.blogWrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    place-items: center;
+}
+.blogWrapper .blog{
+    background: var(--whiteColor);
+    width: 100%;
+    height: 100%;
+    max-width: 45rem;
+    cursor: pointer;
+}
+.blogWrapper .blog .top{
+    width: 100%;
+    height: 22.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.blogWrapper .blog a.imgBox{
+    width: 100%;
+    height: 100%;
+}
+.blogWrapper .blog .top img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.blogWrapper .blog:hover .top img{
+    transform: scale(1.25);
+}
+.blogWrapper a.catagory{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    font-family: var(--primaryFont);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 1rem 4rem;
+}
+.blogWrapper .blog .bottom{
+    padding: 3rem 3.5rem;
+}
+.blogWrapper .blog .bottom h3,
+.blogWrapper .blog .bottom p{
+    padding-bottom: 2rem;
+}
+/***** End Blog Section *****/
+
+/***** Footer Section *****/
+/* footer top start-------------------- */
+footer .top{
+    background: var(--footerTopColor);
+}
+footer .top .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 4rem 3rem;
+}
+footer .top .container .col{
+    width: 100%;
+    max-width: 30rem;
+}
+footer .top .container .col a.logo2{
+    margin-bottom: 2rem;
+}
+footer .top .container .col p{
+    color: var(--lightParaColor);
+}
+footer .top .container .col ul li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+footer .top .container .col ul.social a{
+    display: block;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: var(--primaryColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whiteColor);
+    transition: 0.3s;
+}
+footer .top .container .col ul.social a:hover{
+    color: var(--primaryTextColor);
+    background: var(--whiteColor);
+}
+footer .top .container .col ul.social a i{
+    font-size: 2rem;
+}
+
+footer .top .container .col h3{
+    color: var(--whiteColor);
+    padding-bottom: 2rem;
+}
+footer .top .container .col ul.footerMenu li,
+footer .top .container .col ul.footerMenu li a{
+    display: block;
+}
+footer .top .container .col ul.footerMenu li a{
+    color: var(--lightParaColor);
+    font-family: var(--secondaryFont);
+    font-size: 1.5rem;
+    line-height: 3rem;
+    padding-bottom: 0.5rem;
+}
+/* footer top end-------------------- */
+
+/* footer bottom start-------------------- */
+footer .bottom{
+    background: var(--footerBottomColor);
+}
+footer .bottom .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+footer .bottom .container span{
+    display: block;
+    color: var(--lightParaColor);
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+}
+/* footer bottom end-------------------- */
+/***** End Footer Section *****/

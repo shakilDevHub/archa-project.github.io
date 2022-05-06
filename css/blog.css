@@ -1,0 +1,7 @@
+section#banner{
+    background: url(../img/blog\ banner.jpg) !important;
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

@@ -1,0 +1,297 @@
+/***** home Section *****/
+@media (max-width: 991px) {
+    header nav ul{
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        width: 100%; 
+        position: fixed;
+        top: 80px;
+        right: 0;
+        margin: 0;
+        pointer-events: none;
+    }
+    header nav ul li{
+        display: block;
+        width: 100%;
+        transform: scaleX(0);
+        transition: calc(0.15s * var(--i));
+        transform-origin: right;    
+    }
+    #menuBtn:checked ~ ul{
+        pointer-events: all;
+    }
+    #menuBtn:checked ~ ul li{
+        transform: scaleX(1);
+    }
+    header nav ul li a{
+        width: 100%;
+        display: block;
+        background: var(--primaryTextColor);
+        color: var(--whiteColor);
+        padding: 1.5rem 2rem;
+        transition: 0.3s;
+    }
+    header nav label.barIcon{
+        display: inline-block;
+        width: 8rem;
+        height: 8rem;
+        background: var(--primaryColor);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    header nav label.barIcon:hover{
+        background: var(--primaryTextColor);
+    }
+    header nav label.barIcon i{
+        font-size: 3rem;
+        color: var(--whiteColor);
+    }
+
+    
+    #heroBox .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #service .container .serviceBox{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #work .workBox{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2.5rem;
+    }
+    #client .container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        place-items: center;
+    }
+    #count .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .blogWrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer .top .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+    h1{
+        font-size: 5rem;
+        line-height: 7.5rem;
+    }
+    
+    #about .container{
+        grid-template-columns: 1fr;
+        grid-gap: 5rem;
+    }
+    #about .container .left{
+        width: 100%;
+        max-width: 100%;
+    }
+    #service .container .serviceBox{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #twoColumn .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5rem;
+        align-items: center;
+    }
+    #gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #work .workBox{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2.5rem;
+    }
+    #client .container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        place-items: center;
+    }
+    #count .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem 3rem;
+        place-items: center;
+    }
+    #testimonial{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem 0;
+    }
+    #testimonial div.left{
+        height: 25rem;
+    }
+    #testimonial .right{
+        padding-left: 10%;
+    }
+    .blogWrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .bottom .container{
+        flex-direction: column;
+        gap: 2.5rem 0;
+        padding: 2.5rem 0;
+    }
+    footer .top .container{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 575px) {
+    h1{
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+    #heroBox .wrapper{
+        grid-template-columns: 1fr;
+    }
+    #service .container .serviceBox{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #gallery{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #client .container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4rem;
+        place-items: center;
+    }
+    #count .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5rem 3rem;
+        place-items: center;
+    }
+}
+/***** End home Section **************************
+**************************************
+************************************************
+*********************************************
+******************************************************/
+
+
+/*****About Section *****/
+@media (max-width: 991px){
+    #aboutCard .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #service .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    #aboutCard .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #service .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .imageAndText .container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
+    }
+    .imageAndText .container .left{
+        width: 100%;
+        height: 25rem;
+        overflow: hidden;
+    }
+}
+@media (max-width: 575px) {
+    #service .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/***** End About Section ************************************
+*******************************************************
+************************************************
+***********************************************
+*********************************************/
+
+/***** Service Section *****/
+@media (max-width: 768px) {
+    
+}
+/***** End Service Section ************************************
+*******************************************************
+************************************************
+***********************************************
+*********************************************/
+
+
+/***** Project Section *****/
+@media(max-width: 991px){
+    #discussion .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #discussion .container div.left{
+        width: 100%;
+        height: 25rem;
+    }
+    #discussion .container .right{
+        padding-left: 0;
+    }
+}
+@media(max-width: 768px){
+    #projectGallery .container .galleryWrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0;
+    }
+}
+@media(max-width: 575px){
+    #projectGallery .container .galleryWrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
+    }
+}
+/***** End Project Section **********************
+******************************
+****************************************
+*****************************************
+*********************************************/
+
+
+/***** contact Section *****/
+@media(max-width: 991px){
+    #ContactTop .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media(max-width: 768px){
+    
+}
+@media(max-width: 575px){
+    #ContactTop .container .office .officeWrapper{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.5rem;
+    }
+    #ContactTop .container .office .officeWrapper .card{
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    #ContactTop .container .office .officeWrapper .card .left{
+        text-align: left;
+    }
+}
+/***** End contact Section **********************
+******************************
+****************************************
+*****************************************
+*********************************************/

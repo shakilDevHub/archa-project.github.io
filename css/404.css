@@ -1,0 +1,32 @@
+#banner{
+    background: url(../img/404-banner.jpg) !important;
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#mainContent .container .content{
+    text-align: center;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    grid-gap: 2.5rem;
+}
+#mainContent .container .content h1{
+    color: var(--primaryTextColor);
+    font-size: 10rem;
+    line-height: 10rem;
+}
+#mainContent .container .content h3{
+    text-transform: none;
+    color: var(--primaryTextColor);
+    font-size: 2rem;
+    line-height: 3rem;
+}
+#mainContent .container .content p{
+    color: var(--paraColor);
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
